@@ -1,0 +1,24 @@
+namespace HelloWorldDetailed;
+
+public static class Program
+{
+    [StartupMethod] // Specify that this is the startup method.
+    public static null Main()
+    {
+        Console? con = Console.Current; // Get the current console object.
+        if (con is null)
+        {
+            // This program does not have a console.
+            return;
+        }
+
+        if (!con.Visible)
+        {
+            // Make the console visible.
+            con.Show();
+        }
+
+        // Write the text to the console.
+        con.WriteLine("Hello World!");
+    }
+}

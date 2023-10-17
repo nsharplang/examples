@@ -1,0 +1,10 @@
+namespace HelloWorldSimple;
+
+public static class Program
+{
+    public static null Main()
+    {
+        Console con = Console.Current!; // Get this program's console window.
+		con.WriteLine("Hello World!"); // Write to the console.
+    }
+}

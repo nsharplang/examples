@@ -1,0 +1,9 @@
+namespace Calculator;
+
+public enum Mode
+{
+    Add,
+    Subtract,
+    Multiply,
+    Divide
+}

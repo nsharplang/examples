@@ -1,0 +1,9 @@
+<Project>
+    <Title>Hello World! in N# (More Detailed)</Title>
+    <Output>win-10-x86</Output>
+    <Language>ns</Language>
+    <SdkVersion>1.0</SdkVersion>
+    
+    <OutputBinaryDirectory>./bin/</OutputBinaryDirectory>
+    <OutputObjectDirectory>./obj/</OutputObjectDirectory>
+</Project>

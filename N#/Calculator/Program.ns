@@ -1,0 +1,50 @@
+namespace Calculator;
+
+public static class Program
+{
+    public static null Main()
+    {
+        Console con = Console.Current!; // Get the console window.
+        StreamParser scanner = new(con.In);
+
+        con.Write("Enter the first number > ");
+        double num1 = scanner.ReadDecimal<double>();
+
+        con.Write("Enter the operator > ");
+        Mode mode = scanner.ReadEnum<Mode>();
+
+        con.Write("Enter the second number > ");
+        double num2 = scanner.ReadDecimal<double>();
+
+        double result;
+        switch (mode)
+        {
+            case Mode.Add
+            {
+                result = num1 + num2;
+            }
+            case Mode.Subtract
+            {
+                result = num1 - num2;
+            }
+            case Mode.Multiply
+            {
+                result = num1 * num2;
+            }
+            case Mode.Divide
+            {
+                result = num1 / num2;
+            }
+
+            case _
+            {
+                throw new("Unknown operator.");
+            }
+        }
+
+        con.WriteLine($"Result: {result:0.000}.");
+
+        // Close and dispose.
+        scanner.Close();
+    }
+}
